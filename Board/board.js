@@ -1,4 +1,4 @@
-export class Gameboard {
+class Gameboard {
   constructor() {
     this.ships = [];
     this.board = {};

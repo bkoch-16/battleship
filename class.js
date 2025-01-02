@@ -1,6 +1,6 @@
-import Player from "/Player/player";
-import Gameboard from "/Board/board";
-import Ship from "/Ship/ship";
+const Player = require("./Player/player");
+const Gameboard = require("./Board/board");
+const Ship = require("./Ship/ship");
 
 const board1 = new Gameboard();
 const player1 = new Player("real", board1);
