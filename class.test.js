@@ -1,5 +1,6 @@
-const classes = require("./class")
+const Ship = require("./class");
+const ship = new Ship(5, 5, false);
 
 test("Test isSunk function", () => {
-    expect(Ship.isSunk()).toBeFalsey()
-})
+  expect(ship.isSunk()).toBeTruthy();
+});
