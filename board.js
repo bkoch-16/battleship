@@ -2,6 +2,7 @@ class Gameboard {
   constructor() {
     this.ships = [];
     this.board = {};
+    this.shotHit = {};
   }
 
   placeShip(newShip, coord) {
@@ -16,8 +17,34 @@ class Gameboard {
           return false;
         }
       }
+      for (const element of coord) {
+        this.board[element] = newShip;
+      }
+      this.ships.push(newShip);
       return true;
     }
+  }
+
+  receiveAttack(target) {
+    if (this.shotHit[target] === undefined) {
+      if (this.board[target]) {
+        this.board[target].hit();
+        this.shotHit[target] = true;
+        return true;
+      } else {
+        this.shotHit[target] = false;
+        return false;
+      }
+    } else return "repeat";
+  }
+
+  checkSink() {
+    for (const ship of this.ships) {
+      if (ship.sunk === false) {
+        return false;
+      }
+    }
+    return true;
   }
 }
 module.exports = Gameboard;
