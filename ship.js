@@ -6,15 +6,15 @@ class Ship {
   }
 
   hit() {
-    this.hits += 1
+    this.hits += 1;
   }
 
   isSunk() {
     if (this.hits === this.length) {
-        this.sunk = true
+      this.sunk = true;
     }
-    return this.sunk
+    return this.sunk;
   }
 }
 
-module.exports = Ship
+module.exports = Ship;
