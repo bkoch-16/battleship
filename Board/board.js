@@ -1,4 +1,4 @@
-class Gameboard {
+export class Gameboard {
   constructor() {
     this.ships = [];
     this.board = {};
@@ -45,6 +45,13 @@ class Gameboard {
       }
     }
     return true;
+  }
+
+  renderBoard() {
+    for (const tile in this.board) {
+      const activeTile = document.querySelector("#" + tile);
+      activeTile.color = red;
+    }
   }
 }
 module.exports = Gameboard;
