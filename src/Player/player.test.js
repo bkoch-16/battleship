@@ -1,6 +1,6 @@
 const Player = require("./player");
 const Gameboard = require("../Board/board");
-const Ship = require("../../Ship/ship");
+const Ship = require("../Ship/ship");
 
 test("Test real player creation", () => {
   const board = new Gameboard();

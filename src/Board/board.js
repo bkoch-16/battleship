@@ -10,9 +10,9 @@ class Gameboard {
       return false;
     } else {
       for (const element of coord) {
-        const letter = element.slice(0, 1).toLowerCase();
+        const letter = element.slice(0, 2).toLowerCase();
         const charCode = letter.charCodeAt(0);
-        const number = element.slice(1, 2);
+        const number = element.slice(1);
         if (charCode < 97 || charCode > 106 || number < 1 || number > 10) {
           return false;
         }
