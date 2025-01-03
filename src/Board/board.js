@@ -7,12 +7,13 @@ class Gameboard {
 
   placeShip(newShip, coord) {
     if (coord.length !== newShip.length) {
-      return false;
+      return false
     } else {
       for (const element of coord) {
-        const letter = element.slice(0, 1);
+        const letter = element.slice(0, 1).toLowerCase();
         const charCode = letter.charCodeAt(0);
         const number = element.slice(1);
+        console.log(charCode + " " + number)
         if (charCode < 97 || charCode > 106 || number < 1 || number > 10) {
           return false;
         }
@@ -52,7 +53,7 @@ class Gameboard {
     for (const tile in this.board) {
       console.log("#playerOne #" + tile)
       const activeTile = document.querySelector("#playerOne #" + tile);
-      activeTile.style.backgroundColor = red;
+      activeTile.style.backgroundColor = "red";
     }
   }
 }
