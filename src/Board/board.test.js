@@ -1,5 +1,5 @@
 const Gameboard = require("./board");
-const Ship = require("../../Ship/ship");
+const Ship = require("../Ship/ship");
 
 const board = new Gameboard();
 const ship = new Ship(5, 0, false);
