@@ -48,12 +48,12 @@ class Gameboard {
     return true;
   }
 
-  renderBoard() {
+  renderBoard(color, playerNum) {
     console.log(this.board)
     for (const tile in this.board) {
       console.log("#playerOne #" + tile)
-      const activeTile = document.querySelector("#playerOne #" + tile);
-      activeTile.style.backgroundColor = "red";
+      const activeTile = document.querySelector("#" + playerNum + " #" + tile);
+      activeTile.style.backgroundColor = color;
     }
   }
 }
