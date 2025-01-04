@@ -50,8 +50,11 @@ class Gameboard {
   renderBoard(color, playerNum) {
     console.log(this.board);
     for (const tile in this.board) {
-      const activeTile = document.querySelector("#" + playerNum + " #" + tile);
-      activeTile.style.backgroundColor = color;
+      if (this.board[tile].sunk === true) {
+        const activeTile = document.querySelector("#" + playerNum + " #" + tile);
+        activeTile.style.backgroundColor = color;
+      }
+
     }
     for (const shot in this.shotHit) {
       const activeTile = document.querySelector("#" + playerNum + " #" + shot);
