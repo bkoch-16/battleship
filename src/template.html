@@ -9,29 +9,62 @@
 
   <body>
     <div class="header">
-      <div class="letterLabel">
-        <span class="label">A</span>
-        <span class="label">B</span>
-        <span class="label">C</span>
-        <span class="label">D</span>
-        <span class="label">E</span>
-        <span class="label">F</span>
-        <span class="label">G</span>
-        <span class="label">H</span>
-        <span class="label">I</span>
-        <span class="label">J</span>
+      <div class="controls">
+        <form id="game-start-form" action="./">
+          <fieldset>
+            <p class="holder">
+              <label for="name">Name:</label>
+              <input type="text" name="name" />
+            </p>
+
+            <p class="holder">
+              <label for="playerType">Player Type:</label>
+              <input type="radio" id="human" value="Human" checked />
+              <label for="human">Human</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <p class="holder">
+              <label for="name">Name:</label>
+              <input type="text" name="name" />
+            </p>
+
+            <p class="holder">
+              <label for="playerType">Player Type:</label>
+              <input type="radio" id="human" value="Human" />
+              <label for="human">Human</label>
+              <input type="radio" id="computer" value="Computer" />
+              <label for="computer">Computer</label>
+            </p>
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
       </div>
-      <div class="letterLabel">
-        <span class="label">A</span>
-        <span class="label">B</span>
-        <span class="label">C</span>
-        <span class="label">D</span>
-        <span class="label">E</span>
-        <span class="label">F</span>
-        <span class="label">G</span>
-        <span class="label">H</span>
-        <span class="label">I</span>
-        <span class="label">J</span>
+      <div class="subheader">
+        <div class="letterLabel">
+          <span class="label">A</span>
+          <span class="label">B</span>
+          <span class="label">C</span>
+          <span class="label">D</span>
+          <span class="label">E</span>
+          <span class="label">F</span>
+          <span class="label">G</span>
+          <span class="label">H</span>
+          <span class="label">I</span>
+          <span class="label">J</span>
+        </div>
+        <div class="letterLabel">
+          <span class="label">A</span>
+          <span class="label">B</span>
+          <span class="label">C</span>
+          <span class="label">D</span>
+          <span class="label">E</span>
+          <span class="label">F</span>
+          <span class="label">G</span>
+          <span class="label">H</span>
+          <span class="label">I</span>
+          <span class="label">J</span>
+        </div>
       </div>
     </div>
     <div class="container">

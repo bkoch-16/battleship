@@ -9,6 +9,24 @@
 }
 
 .header {
+  margin: 0;
+}
+
+form {
+  display: grid;
+  padding-left: 70px;
+  grid-template-columns: 300px 300px;
+
+  width: 600px;
+  column-gap: 95px;
+}
+
+button {
+  grid-column: 1 / span2;
+  width: 50px;
+}
+
+.subheader {
   display: flex;
   padding-left: 70px;
   align-items: flex-end;
