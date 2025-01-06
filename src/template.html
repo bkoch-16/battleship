@@ -9,36 +9,10 @@
 
   <body>
     <div class="header">
-      <div class="controls">
-        <form id="game-start-form" action="./">
-          <fieldset>
-            <p class="holder">
-              <label for="name">Name:</label>
-              <input type="text" name="name" />
-            </p>
-
-            <p class="holder">
-              <label for="playerType">Player Type:</label>
-              <input type="radio" id="human" value="Human" checked />
-              <label for="human">Human</label>
-            </p>
-          </fieldset>
-          <fieldset>
-            <p class="holder">
-              <label for="name">Name:</label>
-              <input type="text" name="name" />
-            </p>
-
-            <p class="holder">
-              <label for="playerType">Player Type:</label>
-              <input type="radio" id="human" value="Human" />
-              <label for="human">Human</label>
-              <input type="radio" id="computer" value="Computer" />
-              <label for="computer">Computer</label>
-            </p>
-          </fieldset>
-          <button type="submit">Submit</button>
-        </form>
+      <div class="labels">
+        <span>Player 1 (Human)</span>
+        <span>Player 2 (Computer)</span>
+        <span>Click on player 2 board to fire</span>
       </div>
       <div class="subheader">
         <div class="letterLabel">
@@ -337,5 +311,19 @@
         </div>
       </div>
     </div>
+    <form action="./">
+      <fieldset>
+        <legend>Ship Input</legend>
+        <p class="entry-set">
+          <label for="ship-start">Ship Start Coordinate</label>
+          <input type="text" name="ship-start" />
+        </p>
+        <p class="entry-set">
+          <label for="ship-end">Ship End Coordinate</label>
+          <input type="text" name="ship-end" />
+        </p>
+        <button type="submit" id="start">Submit</button>
+      </fieldset>
+    </form>
   </body>
 </html>

@@ -12,18 +12,14 @@
   margin: 0;
 }
 
-form {
+.labels {
   display: grid;
-  padding-left: 70px;
+  padding-left: 150px;
+  margin: 15px 0px;
   grid-template-columns: 300px 300px;
 
   width: 600px;
   column-gap: 95px;
-}
-
-button {
-  grid-column: 1 / span2;
-  width: 50px;
 }
 
 .subheader {
@@ -83,4 +79,23 @@ button {
   justify-content: center;
 
   font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  margin-left: 50px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+legend {
+  font-size: 18px;
 }
