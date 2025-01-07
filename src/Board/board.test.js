@@ -25,7 +25,7 @@ test("Test ship placement storage", () => {
     C7: ship,
   });
 });
-console.log(board.ships);
+
 test("Test ship placement list", () => {
   expect(board.ships).toEqual([ship]);
 });
@@ -48,10 +48,46 @@ test("Check if all ships are sunk", () => {
   expect(board.checkSink()).toBeFalsy();
 });
 
-test("Shink ships then check if they're sunk", () => {
+test("Sink ships then check if they're sunk", () => {
   board.receiveAttack("C3");
   board.receiveAttack("C5");
   board.receiveAttack("C6");
   board.receiveAttack("C7");
   expect(board.checkSink()).toBeTruthy();
+});
+
+test("Create coordinate array for vertical ship placement", () => {
+  expect(board.createCoordArray("B3", "B7")).toEqual([
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+  ]);
+});
+
+test("Create coordinate array for horizontal ship placement", () => {
+  expect(board.createCoordArray("A4", "D4")).toEqual(["A4", "B4", "C4", "D4"]);
+});
+
+test("Invalid start coordinate", () => {
+  expect(board.createCoordArray("A0", "D4")).toBe("Invalid start coordinate");
+});
+
+test("Invalid end coordinate", () => {
+  expect(board.createCoordArray("A1", "D11")).toBe("Invalid end coordinate");
+});
+
+test("Diagonal ship", () => {
+  expect(board.createCoordArray("A1", "D2")).toBe(
+    "Ship not vertical or horizontal",
+  );
+});
+
+test("Ship too long", () => {
+  expect(board.createCoordArray("A1", "A10")).toBe("Ship length error");
+});
+
+test("Ship too long", () => {
+  expect(board.createCoordArray("A1", "I1")).toBe("Ship length error");
 });

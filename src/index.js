@@ -55,6 +55,22 @@ playerTwoTiles.forEach((tile) => {
   });
 });
 
+const newShipForm = document.querySelector(".newShipForm");
+newShipForm.addEventListener("submit", () => {
+  event.preventDefault();
+  const shipStart = document.querySelector("#ship-start").value;
+  const shipEnd = document.querySelector("#ship-end").value;
+  const outcome = board1.createCoordArray(shipStart, shipEnd);
+  if (typeof outcome === "string") {
+    alert(outcome);
+  } else {
+    const newShip = new Ship(outcome.length);
+    board1.placeShip(newShip, outcome);
+  }
+  newShipForm.reset();
+  document.querySelector("#ship-start").focus();
+});
+
 var moveCount = 0;
 const moveOptions = [
   "A1",
