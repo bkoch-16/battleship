@@ -1,5 +1,3 @@
-const { it } = require("jest-circus");
-
 class Gameboard {
   constructor() {
     this.ships = [];
